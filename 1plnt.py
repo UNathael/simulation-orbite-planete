@@ -25,8 +25,7 @@ vy = 1
 #calcule de la distance solei(x=o; y=0)/centre de la terre 
 D = math.sqrt(px**2 + py**2)
 
-#accélération
-a = G*mpl/(D**2)
+
 
 
 
@@ -34,6 +33,8 @@ plt.ion()
 fig, ax = plt.subplots()
 
 for i in range(5000):
+    #accélération
+    a = G*mpl/(D**2)
     ax = -a*px
     ay = -a*py
     
@@ -54,5 +55,5 @@ for i in range(5000):
     
     plt.pause(0.001)
     
-    plt.ioff()
-    plt.show()
+plt.ioff()
+plt.show()
